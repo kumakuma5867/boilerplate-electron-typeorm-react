@@ -1,0 +1,40 @@
+{
+  "name": "boilerplate-for-electron-typeorm-react",
+  "version": "1.0.0",
+  "description": "Electron + TypeOrm + React",
+  "scripts": {
+    "build": "tsc && npx webpack --no-watch",
+    "start": "npm run build && electron ./dist/main.js"
+  },
+  "repository": "https://github.com/kumakuma5867/boilerplate-electron-typeorm-react",
+  "keywords": [
+    "Electron",
+    "typescript",
+    "TypeOrm",
+    "React"
+  ],
+  "author": "GitHub",
+  "devDependencies": {
+    "@babel/core": "^7.14.0",
+    "@babel/preset-env": "^7.14.1",
+    "@types/react": "^17.0.5",
+    "@types/react-dom": "^17.0.4",
+    "@typescript-eslint/eslint-plugin": "^4.23.0",
+    "@typescript-eslint/parser": "^4.23.0",
+    "babel-loader": "^8.2.2",
+    "electron": "^12.0.7",
+    "eslint": "^7.26.0",
+    "html-webpack-plugin": "^5.3.1",
+    "ts-loader": "^9.1.2",
+    "typescript": "^4.2.4",
+    "webpack": "^5.37.0",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "sqlite3": "^5.0.2",
+    "typeorm": "^0.2.32"
+  }
+}
