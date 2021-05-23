@@ -1,5 +1,10 @@
-import { createConnection } from "typeorm";
+import "reflect-metadata";
+import { createConnection, useContainer } from "typeorm";
 import { Todo } from "./entities/todoEntity";
+import { Container } from "typeorm-typedi-extensions";
+import { todoInterface } from "./interface";
+
+useContainer(Container);
 
 export const bootstrap = async () => {
   await createConnection({
@@ -8,4 +13,7 @@ export const bootstrap = async () => {
     entities: [Todo],
     logging: true,
   });
+
+  /*** ipcMain ***/
+  todoInterface();
 };
