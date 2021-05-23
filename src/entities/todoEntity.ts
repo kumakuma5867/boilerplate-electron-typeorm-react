@@ -7,25 +7,30 @@ import {
   UpdateDateColumn,
 } from "typeorm";
 
+export type TodoStatus = "Todo" | "Doing" | "Done" | "Stop";
+
 @Entity()
 export class Todo {
-  @PrimaryGeneratedColumn()
-  id: number;
+  @PrimaryGeneratedColumn({ type: "int" })
+  id?: number;
 
-  @Column()
+  @Column({ type: "varchar", length: "500" })
   name: string;
 
-  @Column()
-  estimate: number;
+  @Column({ type: "int", nullable: true })
+  estimate?: number | null;
 
-  @Column()
-  actual: number;
+  @Column({ type: "int", nullable: true })
+  actual?: number | null;
+
+  @Column({ type: "varchar", length: 10, default: "Todo" })
+  status?: TodoStatus;
 
   @CreateDateColumn({ type: "datetime" })
-  createdAt: Date;
+  createdAt?: Date;
 
   @UpdateDateColumn({ type: "datetime" })
-  updatedAt: Date;
+  updatedAt?: Date;
 
   @DeleteDateColumn({ type: "datetime", nullable: true })
   deletedAt?: Date | null;

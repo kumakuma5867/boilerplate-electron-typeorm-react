@@ -11,6 +11,15 @@ module.exports = {
     filename: "bundle.js",
     chunkFilename: '[name].js'
   },
+  /**
+   * If you want to use ts-loder, please setup alias for webpack.
+   */
+  // resolve: {
+  //   alias: {
+  //     '@': path.resolve(__dirname, 'src')
+  //   },
+  //   extensions: ['.ts']
+  // },
   // module: {
   //   rules: [{
   //     test: /.tsx?$/,
